@@ -10,6 +10,7 @@ from PIL import Image
 import numpy as np
 
 im = Image.open('D:/deleteme/miller-aerial.jpg')
+im = im.rotate(90, expand=True)
 r, g, b = np.array(im).T
 
 for x in [('r.txt',r),('g.txt',g),('b.txt',b)]:
